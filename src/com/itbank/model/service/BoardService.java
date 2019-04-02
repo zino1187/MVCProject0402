@@ -1,5 +1,7 @@
 package com.itbank.model.service;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 
 import com.itbank.exception.RegistFailException;
@@ -31,6 +33,13 @@ public class BoardService{
 		}finally {
 			manager.release(sqlSession);
 		}
+	}
+	public List selectAll() {
+		SqlSession sqlSession=manager.getSqlSession();
+		boardDAO.setSqlSession(sqlSession);
+		List list=boardDAO.selectAll();
+		manager.release(sqlSession);
+		return list;
 	}
 }
 

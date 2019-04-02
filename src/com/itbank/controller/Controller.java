@@ -12,6 +12,9 @@ public interface Controller {
 	
 	//어떤 뷰페이지를 사용할지 여부를 당연히 동생이 담당해야 한다..
 	public String getResultView();
+	
+	//요청을 유지할지 여부를 판단해주는 메서드 
+	public boolean isForward();
 }
 
 

@@ -7,7 +7,20 @@
 		insert into board(board_id, writer,title,content)
 		values(seq_board.nextval, #{writer},#{title},#{content})		
 	</insert>
+	
+	<select id="selectAll" resultType="Board">
+		select * from board order by board_id desc
+	</select>
+	
 </mapper>
+
+
+
+
+
+
+
+
 
 
 

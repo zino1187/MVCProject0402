@@ -34,7 +34,10 @@ public class WriteController implements Controller{
 	public String getResultView() {
 		return "/board/write/view";
 	}
-	
+	//포워드 여부를 반환한다!!
+	public boolean isForward() {
+		return false;
+	}
 }
 
 

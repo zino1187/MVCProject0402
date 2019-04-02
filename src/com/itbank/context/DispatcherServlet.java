@@ -66,8 +66,13 @@ public class DispatcherServlet extends HttpServlet{
 		resultKey=controller.getResultView();
 			
 		//게시판을 만들면서 무조건 forward 했을때의 문제점을 알아보자!!
-		dis=request.getRequestDispatcher(context.getViewPage(resultKey));
-		dis.forward(request, response);
+		if(controller.isForward()) {
+			dis=request.getRequestDispatcher(context.getViewPage(resultKey));
+			dis.forward(request, response);
+		}else {
+			response.sendRedirect(context.getViewPage(resultKey));
+		}
+		
 	}
 }
 
