@@ -1,0 +1,14 @@
+{
+	"controller":{	
+		"/movie.do":"com.itbank.controller.MovieController",
+		"/food.do":"com.itbank.controller.FoodController",
+		"/board/write.do":"com.itbank.controller.board.WriteController"		
+	},
+	"view":{
+		"/movie/view" : "/movie/result.jsp",
+		"/food/view" : "/food/result.jsp",
+		"/board/write/view":"/board/list.jsp"
+	}
+}
+
+
